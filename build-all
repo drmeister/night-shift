@@ -3,7 +3,7 @@ echo !!! Night-shift:  Deploy script stage 1
 (cd ~/Development/deploy; make clean ; ./main.sh 1 2 3)
 echo !!! Night-shift:  Cando
 (cd ~/Development/cando; ./waf distclean configure build_cmps build_cboehm)
-(cd ~/Development/cando; build/boehm/iclasp-boehm -e "(load \"~/quicklisp/setup.lisp\")" -e "(ql:update-all-dists)" -e "(core:quit)")
+(cd ~/Development/cando; build/boehm/iclasp-boehm -e "(load \"~/quicklisp/setup.lisp\")" -e "(ql:update-all-dists :prompt nil)" -e "(core:quit)")
 echo !!! Night-shift:  Cando build cando quicklisp
 (cd ~/Development/cando; ./build/mps/icando-mps -e "(core:quit)")
 echo !!! Night-shift:  Clasp
